@@ -1,0 +1,706 @@
+/* Reset simples */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes BarProgress {
+    from {
+        width: 0;
+    }
+    
+    to {
+        width:var(--target-width);
+    }
+}
+
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #1C1B99;
+    }
+}
+
+@keyframes fadeInUP {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fim de animações */
+
+/* Fonte */
+.dangrek-regular {
+  font-family: "Dangrek", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+    font-family: 'Dangrek', Arial, Sans-serif;
+    background-color:#CFE2F6 ;
+    color: #333;
+    line-height: 1.6;
+
+
+}
+/* Cabeçalho*/
+header {
+    background-color: #2E84D4;
+    color: white;
+    height: auto;
+    width: 100%;
+    padding: 0.7rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:active {
+    color: #e0e0ff
+}
+
+/* Fim do cabeçalho */
+
+
+/* Ajustes do Inicio */
+.descricao-box {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color:#B1D5FF ;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 3px, 4px, 8pc rgba(54, 68, 153, 0.3);
+    animation: fadeInUP 1s ease-out;
+    transition: width 0.1s; /* Suaviza a transição */
+
+
+}
+
+main h2{
+    font-weight: 900;
+    font-size: 4rem;
+    color: black;
+    margin-top: 4rem;
+    margin-right: 30rem;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+     animation: fadeInDown 0.8s ease-out;
+     transition: width 0.1s; /* Suaviza a transição */
+
+}
+
+.nome {
+    font-weight: 900;
+    font-size: 3rem;
+    color: #1C1B99 ;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #1C1B99;
+    animation: typing 2s steps(40, end), blink-caret 1s infinite;
+    margin: 0 auto;
+    width: fit-content;
+    max-width: 575px;
+    transition: width 0.1s; /* Suaviza a transição */
+
+}
+
+.Cargo {
+    font-weight: 500;
+    font-size: 1.8rem;
+    color:#636370 ;
+    margin-bottom:1.5rem ;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    animation: slideInLeft 0.8s ease-out;
+    transition: width 0.1s; /* Suaviza a transição */
+
+}
+
+
+
+.icone-de-código{
+  width: 50px;
+  height: 50px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+/* Fim do Início */
+
+/* Ajustes das Skills  */
+
+.skills-box{
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color:#D9D9D9 ;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    animation: slideInLeft 0.8s ease-out;
+    
+}
+
+.skill-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem; /* Espaço entre cada skill */
+}
+
+.skill-bar{
+    width: 100%;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.skill-progress[data-skill="75"] { 
+    --target-width: 75%;
+    width: 0%; /* Começa em 0 */
+    animation: BarProgress 2s ease-out 0.5s forwards; /* Delay de 0.5s */
+}
+
+.skill-progress[data-skill="70"] { 
+    --target-width: 70%;
+    width: 0%;
+    animation: BarProgress 2s ease-out 1s forwards; /* Delay de 1s */
+}
+
+.skill-progress[data-skill="50"] { 
+    --target-width: 50%;
+    width: 0%;
+    animation: BarProgress 2s ease-out 1.5s forwards; /* Delay de 1.5s */
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: #2E84D4;
+    transition: width 0.1s; /* Suaviza a transição */
+
+
+}
+
+/* fim das skills  */
+
+/* Soft-Skills  */
+
+.softskills-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color:#D9D9D9 ;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    animation: slideInLeft 0.8s ease-out;
+}
+/* Fim das softskills  */
+
+
+/*contatos*/
+
+.contact-box {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #2E84D4;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+
+}
+
+.contact-icons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icons a {
+   padding: 0.5rem;
+   transition: transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+   transform: scale(1.1);
+}
+
+.github {
+  width: 50px;
+  height: 50px;
+  margin-top: 0.5rem;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+
+.instagram {
+  width: 50px;
+  height: 50px;
+  margin-top: 0.5rem;
+  max-width: 50px;
+  max-height: 50px;
+ 
+}
+
+.email{
+  width: 50px;
+  height: 50px;
+  margin-top: 0.5rem;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.linkedin {
+  width: 70px;
+  height: 70px;
+  margin-top: 0.5rem;
+  max-width: 70px;
+  max-height: 70px;
+}
+
+
+/* Ajustes da Scrollbar  */
+
+/* Para navegadores Webkit (Chrome, Safari, Edge) -  */
+::-webkit-scrollbar {
+    width: 12px;  /* Largura da scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #CFE2F6;  /* Cor do fundo (igual ao seu body) */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1421A8;  /* Cor da "alça" (igual ao seu header) */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1C1B99;  /* Cor ao passar mouse (igual ao seu nome) */
+}
+
+
+
+
+/* ===== MEDIA QUERIES - RESPONSIVIDADE ===== */
+
+/* Mobile pequeno - 400px e abaixo */
+@media screen and (max-width: 400px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        padding: 0.8rem 0.5rem;
+        gap: 0.8rem;
+    }
+    
+    .logo {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        align-items: center;
+    }
+    
+    nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+        width: 100%;
+        max-width: 120px;
+        text-align: center;
+    }
+    
+    /* Main */
+    main {
+        padding: 0.3rem;
+    }
+    
+    main h2 {
+        font-size: 1.8rem;
+        margin: 0.8rem 0 0.5rem 0;
+        margin-right: 0;
+    }
+    
+    .nome {
+        font-size: 1.3rem;
+        white-space: normal;
+        word-wrap: break-word;
+        line-height: 1.2;
+        border-right: none;
+        animation: fadeInDown 0.8s ease-out;
+        padding: 0 0.3rem;
+        max-width: 100%;
+    }
+    
+    .Cargo {
+        font-size: 1rem;
+        flex-direction: column;
+        padding: 0 0.3rem;
+        margin-bottom: 0.8rem;
+        gap: 0.3rem;
+    }
+    
+    .icone-de-código {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .descricao-box {
+        padding: 0.8rem;
+        margin: 0.8rem auto;
+        font-size: 0.9rem;
+    }
+    
+    .skills-box {
+        padding: 1rem 0.8rem;
+        margin: 1rem auto;
+    }
+    
+    .skill-item {
+        font-size: 0.85rem;
+        gap: 0.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .skill-name {
+        min-width: 70px;
+        font-size: 0.8rem;
+    }
+    
+    .skill-porcentage {
+        min-width: 35px;
+        font-size: 0.8rem;
+    }
+    
+    .softskills-box {
+        grid-template-columns: 1fr;
+        padding: 1rem 0.8rem;
+        margin: 1rem auto;
+        gap: 0.5rem;
+    }
+    
+    .softskill-item {
+        font-size: 0.85rem;
+        padding: 0.4rem;
+    }
+    
+    .contact-box {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .contact-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-icons {
+        gap: 0.8rem;
+    }
+    
+    .github, .instagram, .email {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .linkedin {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* iPhone SE - 375px */
+@media screen and (max-width: 375px) {
+    .nome {
+        font-size: 1.2rem;
+    }
+    
+    main h2 {
+        font-size: 1.6rem;
+    }
+    
+    .descricao-box {
+        font-size: 0.85rem;
+        padding: 0.7rem;
+    }
+}
+
+/* Tablets - 768px e acima */
+@media screen and (min-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+    
+    .logo {
+        font-size: 1.4rem;
+    }
+    
+    nav {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    
+    /* Main */
+    main {
+        padding: 2rem;
+    }
+    
+    main h2 {
+        font-size: 3.5rem;
+        margin: 3rem 0 2rem 0;
+    }
+    
+    .nome {
+        font-size: 2.5rem;
+        max-width: 600px;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid #1C1B99;
+        animation: typing 2s steps(40, end), blink-caret 1s infinite;
+    }
+    
+    .Cargo {
+        font-size: 1.5rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .icone-de-código {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .descricao-box {
+        max-width: 800px;
+        padding: 2rem;
+        font-size: 1rem;
+    }
+    
+    .skills-box {
+        max-width: 800px;
+        padding: 2rem;
+    }
+    
+    .skill-item {
+        font-size: 1rem;
+        gap: 1rem;
+    }
+    
+    .skill-name {
+        min-width: 100px;
+        font-size: 1rem;
+    }
+    
+    .skill-porcentage {
+        font-size: 1rem;
+    }
+    
+    /* Soft-Skills em 2 colunas */
+    .softskills-box {
+        grid-template-columns: 1fr 1fr;
+        max-width: 800px;
+        padding: 2rem;
+        gap: 1rem;
+    }
+    
+    .softskill-item {
+        font-size: 1rem;
+    }
+    
+    .contact-title {
+        font-size: 2rem;
+    }
+    
+    .contact-icons {
+        gap: 2rem;
+    }
+    
+    .github, .instagram, .email {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .linkedin {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Desktop - 1024px e acima */
+@media screen and (min-width: 1024px) {
+    header {
+        padding: 1rem 3rem;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    main {
+        padding: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    main h2 {
+        font-size: 4rem;
+        margin-right: 0;
+        justify-content: center;
+    }
+    
+    .nome {
+        font-size: 3rem;
+        max-width: 700px;
+    }
+    
+    .Cargo {
+        font-size: 1.8rem;
+    }
+    
+    .icone-de-código {
+        width: 60px;
+        height: 60px;
+    }
+    
+    /* Soft-Skills em 3 colunas no desktop */
+    .softskills-box {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .contact-icons {
+        gap: 2.5rem;
+    }
+    
+    .github, .instagram, .email {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .linkedin {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Desktop Large - 1440px e acima */
+@media screen and (min-width: 1440px) {
+    .nome {
+        max-width: 800px;
+    }
+    
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+}
+
+/* Landscape em dispositivos móveis */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    main h2 {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+    
+    .nome {
+        font-size: 1.5rem;
+    }
+    
+    .Cargo {
+        font-size: 1.1rem;
+    }
+    
+    .descricao-box {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    
+    .skills-box,
+    .softskills-box {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+}
