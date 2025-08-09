@@ -8,6 +8,11 @@ Um portfólio moderno e responsivo desenvolvido para apresentar minhas habilidad
 
 ## 🚀 Demonstração
 
+<img width="1914" height="884" alt="image" src="https://github.com/user-attachments/assets/0e1a60c1-c63e-4e36-92cb-a0551c285139" /> <img width="1914" height="848" alt="image" src="https://github.com/user-attachments/assets/8de7472d-548f-4984-a8c1-a7112e0c7cfb" /> <img width="1911" height="278" alt="image" src="https://github.com/user-attachments/assets/3a8e6289-fd8b-4418-ad38-f1014dcf0d5b" />
+
+
+
+
 **🌐 [Acesse o portfólio online](https://portifolio-kauadrebes.netlify.app/)** 
 
 O portfólio apresenta:
